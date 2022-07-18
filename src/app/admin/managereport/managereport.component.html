@@ -1,0 +1,63 @@
+<app-header></app-header>
+<br><br>
+
+<section class="mb-5">
+   <div class="container">
+    <div class="row">
+    <div class="col-12">
+        <div class="card shadow border-primary">
+            <div class="card-header border-0 bg-primary">
+                <h5 class="mb-0 text-white">Reports</h5>
+                    </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">No. of Seat</th>
+                        <th scope="col">Passenger Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Meal</th>
+                        <th scope="col">Seat Number</th>
+                        <th scope="col">PNR</th>
+                        <th scope="col">Booked Date</th>
+                        <th scope="col">Flight</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    <tr *ngFor="let rpt of bookingtbs ">
+                        <td>{{rpt.id}}</td>
+                        <td>{{rpt.name}}</td>
+                        <td>{{rpt.email}}</td>
+                        <td>{{rpt.numofSeat}}</td>
+                        <td>{{rpt.pname}}</td>
+                        <td>{{rpt.pgender}}</td>
+                        <td>{{rpt.page}}</td>
+                        <td>{{rpt.meal}}</td>
+                        <td>{{rpt.seatNo}}</td>
+                        <td>{{rpt.pnr}}</td>
+                        <td>{{rpt.bookedDate}}</td>
+                        <td>{{rpt.flightId}}</td>
+                        <td>{{rpt.status}}</td>
+                        <td>
+                            <button class="btn btn-outline-info rounded-btn">
+                                <i class="fa fa-edit"></i>
+                            </button>
+                            &nbsp;&nbsp;
+                            <button class="btn btn-outline-warning rounded-btn">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </td>
+                        
+                    </tr>
+                </thead>
+            </table>
+          </div>          
+        </div>
+    </div>
+    </div>
+   </div>
+</section>

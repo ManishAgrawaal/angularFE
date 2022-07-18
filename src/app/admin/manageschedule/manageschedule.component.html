@@ -1,0 +1,162 @@
+<app-header></app-header>
+<br><br>
+<section class="mb-5">
+    <div class="container mt-7">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow border-primary">
+                   <div class="card-header border-0 bg-primary">
+               <h5 class="mb-0 text-white">Manage Schedule</h5>
+                   </div>
+                   <form style="padding:20px">
+               
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Airline Id</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="airlineId" [(ngModel)]="scheduletbs.airlineId" class="form-control"/></div>
+                        <label class="col-sm-2 col-form-label">Flight Number</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="flightNum" [(ngModel)]="scheduletbs.flightNum" class="form-control"/></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">From Place</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="fromPlace" [(ngModel)]="scheduletbs.fromPlace" class="form-control"/></div>
+                        <label class="col-sm-2 col-form-label">To Place</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="toPlace" [(ngModel)]="scheduletbs.toPlace" class="form-control"/></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Strat Date</label>
+                        <div class="col-sm-4">
+                            <input type="date" name="startDate" [(ngModel)]="scheduletbs.startDate" class="form-control"/></div>
+                        <label class="col-sm-2 col-form-label">Start Time</label>
+                        <div class="col-sm-4">
+                            <input type="time" name="startTime" [(ngModel)]="scheduletbs.startTime" class="form-control"/></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">End Date</label>
+                        <div class="col-sm-4">
+                            <input type="date" name="endDate" [(ngModel)]="scheduletbs.endDate" class="form-control"/></div>
+                        <label class="col-sm-2 col-form-label">End Time</label>
+                        <div class="col-sm-4">
+                            <input type="time" name="endTime" [(ngModel)]="scheduletbs.endTime" class="form-control"/></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Schedule Days</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="schDays" [(ngModel)]="scheduletbs.schDays" class="form-control"/></div>
+                        <label class="col-sm-2 col-form-label">Instrument Type</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="instrumentType" [(ngModel)]="scheduletbs.instrumentType" class="form-control"/></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Business Class Seat</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="bclassSeat" [(ngModel)]="scheduletbs.bclassSeat" class="form-control"/></div>
+                        <label class="col-sm-2 col-form-label">NB Class Seat</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="nbclassSeat" [(ngModel)]="scheduletbs.nbclassSeat" class="form-control"/></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Price</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="price" [(ngModel)]="scheduletbs.price" class="form-control"/></div>
+                        <label class="col-sm-2 col-form-label">No of Rows</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="noOfRows" [(ngModel)]="scheduletbs.noOfRows" class="form-control"/></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Meal Plan</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="mealPlan" [(ngModel)]="scheduletbs.mealPlan" class="form-control"/></div>
+                        <label class="col-sm-2 col-form-label">Status</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" name="status" [(ngModel)]="scheduletbs.status">
+                                <option value="Active">Active</option>
+                                <option value="Deactive">Deactive</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="text-center" >
+                        <button type="Submit" class="btn btn-primary" (click)="AddSchedule()" class="btn btn-primary">Submit</button>
+                    </div>
+            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-5">
+   <div class="container">
+    <div class="row">
+    <div class="col-12">
+        <div class="card shadow border-primary">
+            <div class="card-header border-0 bg-primary">
+                <h5 class="mb-0 text-white">Manage Schedule</h5>
+                    </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Airline</th>
+                        <th scope="col">Flight No</th>
+                        <th scope="col">From Place</th>
+                        <th scope="col">To Place</th>
+                        <th scope="col">Start DateTime</th>
+                        <th scope="col">End DateTime</th>
+                        <th scope="col">Sch Days</th>
+                        <th scope="col">Instrument</th>
+                        <th scope="col">Bclass</th>
+                        <th scope="col">Nbclass</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Rows</th>
+                        <th scope="col">Meal</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    <tr *ngFor="let sch of getData">
+                        <td>{{sch.id}}</td>
+                        <td>{{sch.airlineId}}</td>
+                        <td>{{sch.flightNum}}</td>
+                        <td>{{sch.fromPlace}}</td>
+                        <td>{{sch.toPlace}}</td>
+                        <td>{{sch.startDate}} {{sch.startTime}}</td>
+                        <td>{{sch.endDate}} {{sch.endTime}}</td>
+                        <td>{{sch.schDays}}</td>
+                        <td>{{sch.instrumentType}}</td>
+                        <td>{{sch.bclassSeat}}</td>
+                        <td>{{sch.nbclassSeat}}</td>
+                        <td>{{sch.price}}</td>
+                        <td>{{sch.noOfRows}}</td>
+                        <td>{{sch.mealPlan}}</td>
+                        <td>{{sch.status}}</td>
+                        <td>
+                            <!--<button class="btn btn-outline-info rounded-btn">
+                                <i class="fa fa-edit"></i>
+                            </button>-->
+                            &nbsp;&nbsp;
+                            <button class="btn btn-outline-warning rounded-btn">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </td>
+                        
+                    </tr>
+                </thead>
+            </table>
+           
+          </div>          
+        </div>
+    </div>
+    </div>
+   </div>
+</section>

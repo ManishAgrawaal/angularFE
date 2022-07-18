@@ -1,0 +1,103 @@
+<app-header></app-header>
+<br>
+<br>
+<section class="mb-5">
+    <div class="container mt-7">
+        <div class="row">
+            <div class="col-12 col-md-12 col-sm-12">
+                <div class="card shadow border-primary">
+                   <div class="card-header border-0 bg-primary">
+               <h5 class="mb-0 text-white">Manage Airline</h5>
+                   </div>
+                   <form style="padding:20px">
+               
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Airline Name</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="airlineName" [(ngModel)]="airlineRegTbs.airlineName" />
+                        </div>
+                        <label class="col-sm-2 col-form-label">Contact Address</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="caddress" [(ngModel)]="airlineRegTbs.caddress" />
+                        </div>
+                            
+                    </div>
+
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Contact Number</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" name="cnum" [(ngModel)]="airlineRegTbs.cnum" /></div>
+                        
+                            <label class="col-sm-2 col-form-label">Logo Url</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" name="logo" [(ngModel)]="airlineRegTbs.logo" /></div>
+                         
+                    </div>
+                    
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Status</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" name="isActive" [(ngModel)]="airlineRegTbs.isActive">
+                                <option value="active">Active</option>
+                                <option value="deactive">Deactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center" >
+                        <button type="submit" (click)="AddAirline()" class="btn btn-primary">Submit</button>
+                    </div>
+            </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-5">
+   <div class="container">
+    <div class="row">
+    <div class="col-12">
+        <div class="card shadow border-primary">
+            <div class="card-header border-0 bg-primary">
+                <h5 class="mb-0 text-white">Manage Airline</h5>
+                    </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Logo</th>
+                        <th scope="col">Airline Name</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">Contact Address</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                    <tr *ngFor="let air of getData">
+                        <td>{{ air.id  }}</td>
+                        <td>{{ air.logo  }}</td>
+                        <td>{{ air.airlineName  }}</td>
+                        <td>{{ air.cnum }}</td>
+                        <td>{{ air.caddress  }}</td>
+                        <td>{{ air.isActive  }}</td>
+                        <td>
+                            <!--<button class="btn btn-outline-info rounded-btn">
+                                <i class="fa fa-edit"></i>
+                            </button>-->
+                            &nbsp;&nbsp;
+                            <button type="submit" (click)="DeleteAirline(air)" class="btn btn-outline-warning rounded-btn">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                
+                </thead>
+            </table>
+           </div>          
+        </div>
+    </div>
+    </div>
+   </div>
+</section>
