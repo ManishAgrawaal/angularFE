@@ -1,27 +1,69 @@
-# FlightManagementSystem
+# ✈ Flight Management System
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
+## 📌 Project Overview
 
-## Development server
+Flight Management System is a web application developed to manage flight bookings, passenger details, and scheduling operations efficiently.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Technology Used
 
-## Code scaffolding
+Frontend:
+• Angular  
+• TypeScript  
+• HTML  
+• CSS  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Backend (if applicable):
+• .NET Core API  
 
-## Build
+Database:
+• SQL Server  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Tools:
+• Git  
+• VS Code  
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## ⭐ Features
 
-## Running end-to-end tests
+✔ Flight listing  
+✔ Passenger management  
+✔ Booking system  
+✔ Search flights  
+✔ Responsive UI  
+✔ Error handling  
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🏗 Architecture
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Frontend → Angular UI  
+Backend → REST API  
+Database → SQL Server  
+
+3 Tier Architecture:
+Controller → Service → Data Layer
+
+---
+
+## 📷 Screenshots
+
+(Add project screenshots here)
+
+Example:
+
+![Dashboard](dashboard.png)
+
+---
+
+## ⚙ How to Run Project
+
+1 Clone repository-  https://github.com/ManishAgrawaal/angularFE.git
+2 Install packages
+3 Run project
+4 Open browser: http://localhost:4200
+
+
+
+
+
